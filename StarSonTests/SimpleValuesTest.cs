@@ -46,4 +46,10 @@ public class Tests
     {
         Assert.That(serializer.Serialize(true), Is.EqualTo("True"));
     }
+
+    [Test]
+    public void NullTest()
+    {
+        Assert.That(serializer.Serialize(null), Is.EqualTo("null"));
+    }
 }

@@ -2,16 +2,18 @@
 
 public class StarSON
 {
-    public string Serialize(object obj)
+    public string Serialize(object? obj)
     {
         string res = String.Empty;
         if (obj is int || obj is long || obj is short || obj is char ||
-            obj is float || obj is double || obj is decimal || obj is bool)
+            obj is float || obj is double || obj is decimal || obj is bool) 
         {
             return obj.ToString();
         }
 
-        if (obj is String) return $"\"{obj}\"";
+        if (obj is string) return $"\"{obj}\"";
+
+        if (obj is null) return "null";
 
         if (obj is List<object> list)
         {
