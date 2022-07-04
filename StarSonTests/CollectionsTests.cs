@@ -35,4 +35,5 @@ public class CollectionsTests
                 new Dictionary<string, object>{{"key1", new Dictionary<string, object>{{"key2", 1}}}}),
             Is.EqualTo("{key1:{key2:1}}"));
     }
+
 }
